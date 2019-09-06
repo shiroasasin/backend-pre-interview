@@ -19,5 +19,7 @@ from echo import views
 
 urlpatterns = [  # pylint: disable=invalid-name
     url(r'^echo/$', views.echo),
+    url(r'^data/$', views.post_data),
+    url(r'^data/(?P<id>[^/]+)/$', views.get_detail_record),
     url('admin/', admin.site.urls),
 ]
